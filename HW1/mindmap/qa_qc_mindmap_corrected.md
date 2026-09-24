@@ -64,7 +64,7 @@
 4. Defects cluster together
 5. Tests wear out
 6. Testing is context dependent
-7. Absence-of-errors is a fallacy
+7. Absence-of-defects fallacy *(v3.1 worded this "absence-of-errors fallacy")*
 
 ### 8. Static vs dynamic testing (§3.1, differences in §3.1.3)
 - **Static testing** — the work product is not executed

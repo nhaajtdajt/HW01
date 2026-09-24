@@ -76,6 +76,8 @@ The syllabus defines *roles*, not job titles, and the same person may perform bo
 
 **Why it matters:** R1 of this homework shows the difference in practice — the Money Forward posting puts the test management role (release decisions, risk governance) and the testing role (automation, execution) in a single job advert.
 
+The same page adds: *"Different people may take on these roles at different times … It is also possible for one person to take on the roles of testing and test management at the same time."* **Evidence:** `evidence/mindmap_istqb_roles.png`.
+
 ---
 
 ## Also worth noting (not counted as one of the three)
@@ -84,11 +86,30 @@ Branch 1 "QA vs QC vs Testing — how they differ" lists the three terms and exp
 
 ---
 
-## Evidence to capture
+## Mistake 5 (spare) — principle 7 uses the old wording
 
-| File | What |
+**AI said:**
+> 6. The ISTQB testing principles — … **"Absence-of-errors fallacy"**
+
+**ISTQB v4.0, §1.3, principle 7 (p. 18):**
+> "7. **Absence-of-defects fallacy**. It is a fallacy (i.e., a misconception) to expect that software verification will ensure the success of a system."
+
+v4.0 renamed this principle from *absence-of-errors* (v3.1) to *absence-of-defects*. Same version caveat as mistakes 1 and 2: it only counts if your class uses v4.0.
+
+**Evidence:** `evidence/mindmap_istqb_principle5.png` — the same screenshot shows principles 5, 6 and 7.
+
+---
+
+## Evidence (captured 24/09/2026)
+
+| File | What it shows |
 |---|---|
-| `evidence/mindmap_ai_1.png` | The Gemini chat showing the mindmap |
-| `evidence/mindmap_istqb_levels.png` | Syllabus PDF p. 27, Ctrl+F `five test levels` |
-| `evidence/mindmap_istqb_types.png` | Syllabus PDF p. 28, Ctrl+F `four test types` |
-| `evidence/mindmap_istqb_principle5.png` | Syllabus §1.3, Ctrl+F `Tests wear out` |
+| `evidence/mindmap_ai_1.png` | Gemini chat: the prompt and branches 1–4 |
+| `evidence/mindmap_ai_2.png` | Gemini chat: branches 3–7, including the four test levels and "Pesticide paradox is destructive" |
+| `evidence/mindmap_ai_3.png` | Gemini chat: branches 5–7 in full |
+| `evidence/mindmap_istqb_levels.png` | Syllabus p. 27, `five test levels` highlighted — mistake 1 |
+| `evidence/mindmap_istqb_types.png` | Syllabus p. 28, `four test types` highlighted — mistake 2 |
+| `evidence/mindmap_istqb_principle5.png` | Syllabus p. 18, `Tests wear out` highlighted — mistake 3 (and principle 7, mistake 5) |
+| `evidence/mindmap_istqb_roles.png` | Syllabus p. 21, `two principal roles in testing` highlighted — mistake 4 |
+
+Every syllabus screenshot shows the page footer **"v4.0 … 2023-04-21 © International Software Testing Qualifications Board"**, which proves which edition was used.
