@@ -24,7 +24,7 @@ Export in this order into one PDF:
 | 1 | Requirement 1 — QA/QC Job Market 2026+ | `R1_job_market/R1_report.md` + `screenshots/` | ✅ Done |
 | 2 | Requirement 2 — 20 Software Defects | `R2_defects/R2_report.md` + `evidence/` | ✅ Done |
 | 3 | Requirement 3 — Physical product test design | *not started* | ⬜ |
-| 4 | QA/QC role mindmap + 3 mistakes found (G9.1) | `mindmap/` | ✅ Done (chat screenshot pending) |
+| 4 | QA/QC role mindmap + 3 mistakes found (G9.1) | `mindmap/` | ✅ Done |
 | 5 | AI Audit Report summary | §4 below + `[AI-02]` docx | 🟡 Verdicts drafted - review them |
 | 6 | AI Critique (200–300 words) | §5 below | 🟡 Draft written - rewrite in your words |
 | 7 | Mandatory Disclosure | §6 below | 🟡 Confirm wording |
@@ -121,6 +121,6 @@ Prohibited-category artifacts in this submission, all produced by me without AI:
 5. Execute **≥ 5** test cases on the real device, record videos **≤ 60s with your own voice**, upload as YouTube Unlisted.
 6. Find **≥ 5 defects** and log them as Issues in your own GitHub repo; screenshot the Issues page showing your GitHub username.
 
-**Mindmap (G9.1) — done.** `mindmap/mindmap_ai_original.md` (AI version), `mindmap/mindmap_3_mistakes.md` (the three mistakes against ISTQB v4.0), `mindmap/qa_qc_mindmap_corrected.md` (the corrected mindmap to submit as PNG or Markdown). Still to capture: a screenshot of the Gemini chat, and screenshots of the three syllabus passages.
+**Mindmap (G9.1) — done.** `mindmap/mindmap_ai_original.md` (AI version), `mindmap/mindmap_3_mistakes.md` (the three mistakes against ISTQB v4.0), `mindmap/qa_qc_mindmap_corrected.md` (the corrected mindmap to submit as PNG or Markdown). All 7 evidence screenshots are in `mindmap/evidence/`.
 
 **Templates to sign:** `[AI-02]`, `[AI-03]`, `[AI-05]` (and `[AI-06]` must already be signed from Week 1).

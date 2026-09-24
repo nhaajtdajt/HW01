@@ -197,8 +197,12 @@ The tool was reliable on **famous headline facts** (dates, totals, CVE numbers) 
 **(2) AI Output:** `mindmap/mindmap_ai_original.md` (+ chat screenshot `evidence/mindmap_ai_1.png`, still to capture).
 **(3) Verdict:** suggested **INVALID** - three of the seven branches misstate the syllabus, including a garbled testing principle.
 **(4) Reasoning:** checked against the official ISTQB CTFL v4.0 syllabus (2023-04-21): five test levels are defined in 2.2.1, four test types in 2.2.2, confirmation and regression testing are a separate topic in 2.2.3, and principle 5 is "Tests wear out" - the word "pesticide" does not appear in the syllabus at all.
-**(5) Student Fix:** `mindmap/qa_qc_mindmap_corrected.md`, with the three corrected branches documented in `mindmap/mindmap_3_mistakes.md`.
+**(5) Student Fix:** `mindmap/qa_qc_mindmap_corrected.md`, with the corrected branches documented in `mindmap/mindmap_3_mistakes.md` (3 mistakes used + 2 spares). All 7 evidence screenshots are in `mindmap/evidence/`.
 
 **Note for the critique:** the mindmap is internally consistent with the *older v3.1* syllabus on test levels and test types. The model appears to have blended editions rather than invented content outright - a different failure mode from the fabrications seen in R2, and one that only shows up if you know which edition you are being graded against.
 
-**Claude's own error in this task:** the first corrected mindmap it produced cited "section 2.3" for change-related testing; the official table of contents shows 2.3 is Maintenance Testing and the correct reference is 2.2.3. Corrected after reading the PDF.
+**Claude's own errors in this task (two of them):**
+1. The first corrected mindmap cited "section 2.3" for change-related testing; the official table of contents shows 2.3 is Maintenance Testing and the correct reference is 2.2.3.
+2. The same file listed testing principle 7 as "Absence-of-errors is a fallacy" — the v3.1 wording. The v4.0 syllabus renamed it **"Absence-of-defects fallacy"**. This was only caught when the student's screenshot of page 18 showed the principle in full.
+
+Both were corrected. Note the pattern: Claude reproduced **v3.1 wording while claiming to describe v4.0** — the same failure mode it had just documented in Gemini's mindmap.
