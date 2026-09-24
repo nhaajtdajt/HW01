@@ -1,0 +1,89 @@
+R2-B1 answer (D01–D05) — text as pasted by the student into Claude at 21:39 22/09/2026.
+Tool: <student to fill: Gemini / ChatGPT / ...>   Sent at: <student to fill: HH:MM dd/mm/yyyy>
+This text copy is for reference only. The graded evidence is the SCREENSHOT of the original chat.
+--------------------------------------------------------------------------------
+
+1. The Atlassian cloud outage (April 2022)
+(1) Exact date: April 5, 2022.
+
+(2) Organisation and system involved: Atlassian (Jira, Confluence, and Jira Service Management cloud instances).
+
+(3) Technical root cause: A maintenance script executed during a routine site migration contained a bug that mistakenly deleted customer data instead of migrating it.
+
+(4) Scale of impact with numbers: Over 400 distinct enterprise tenant sites were completely deleted or rendered inaccessible; outage duration lasted up to two weeks for affected users.
+
+(5) Financial or legal consequences: Massive loss of enterprise productivity, SLA penalty credits issued to customers, and a temporary drop in stock value.
+
+(6) Who was responsible: Atlassian engineering and cloud operations team.
+
+(7) How it was fixed and what prevention was added: Restored data manually and via automated backups; added stricter safety validation checks to migration scripts and improved recovery automation workflows.
+
+(8) Severity rating: Critical — Permanent data deletion and prolonged downtime for core enterprise project-management tools.
+
+2. The Rogers Communications network outage in Canada (July 2022)
+(1) Exact date: July 8, 2022.
+
+(2) Organisation and system involved: Rogers Communications (Core IP network and routing infrastructure).
+
+(3) Technical root cause: A core router maintenance update caused a routing table malfunction, triggering a cascading failure across the backbone network (BGP configuration overload).
+
+(4) Scale of impact with numbers: Approximately 12 million Canadians lost internet, mobile, and emergency 911 services, along with widespread disruptions to banking and Interac payment networks.
+
+(5) Financial or legal consequences: Mandated reporting to the CRTC (Canadian Radio-television and Telecommunications Commission), over $150 million in customer credit payouts, and intense regulatory scrutiny.
+
+(6) Who was responsible: Rogers network operations team and change management leadership.
+
+(7) How it was fixed and what prevention was added: Rolled back the faulty maintenance change and isolated routing nodes; implemented stricter change control policies, separate core network test environments, and improved routing resilience.
+
+(8) Severity rating: Critical — Paralyzed national communication infrastructure, financial transactions, and emergency medical services.
+
+3. The Nomad bridge hack (August 2022)
+(1) Exact date: August 1, 2022.
+
+(2) Organisation and system involved: Nomad cross-chain bridge smart contract.
+
+(3) Technical root cause: A previous smart contract upgrade initialized a zero-root (0x00) configuration value as a valid default proof for all messages, allowing anyone to forge replica transactions without verification.
+
+(4) Scale of impact with numbers: Approximately $190 million drained from the protocol within hours by hundreds of exploiters ("copycat hackers").
+
+(5) Financial or legal consequences: Total loss of $190 million in cryptocurrency liquidity (with roughly $36 million later recovered via white-hat actions).
+
+(6) Who was responsible: Nomad development team and smart contract auditing firms that missed the flawed initialization logic.
+
+(7) How it was fixed and what prevention was added: Paused the bridge contract; instituted formal verification protocols, multi-signature safeguards, and comprehensive third-party security audits before any future contract upgrades.
+
+(8) Severity rating: Critical — Catastrophic financial theft resulting from a fundamental logic error in smart contract authorization.
+
+4. The Ticketmaster failure during the Taylor Swift Eras Tour presale (November 2022)
+(1) Exact date: November 15, 2022.
+
+(2) Organisation and system involved: Ticketmaster (Ticketing platform and queue management system).
+
+(3) Technical root cause: An unprecedented surge of bot traffic combined with flawed queue architecture that failed to handle massive concurrent user spikes and database locking.
+
+(4) Scale of impact with numbers: Millions of fans locked out of the site, over 3.5 billion total system requests processed, and outages lasting more than 14 hours.
+
+(5) Financial or legal consequences: Congressional antitrust scrutiny and hearings, multiple class-action lawsuits from consumers, and severe reputational brand damage.
+
+(6) Who was responsible: Ticketmaster engineering, capacity planning, and anti-bot security teams.
+
+(7) How it was fixed and what prevention was added: Cancelled subsequent public sales to manage demand; upgraded cloud infrastructure capacity, implemented stricter staggered queueing, and deployed advanced bot mitigation techniques.
+
+(8) Severity rating: High — Severe service disruption and legal/regulatory backlash, though core transactional databases remained intact.
+
+5. The Southwest Airlines holiday meltdown (December 2022)
+(1) Exact date: December 21–29, 2022.
+
+(2) Organisation and system involved: Southwest Airlines (SkySolver crew scheduling and operational software).
+
+(3) Technical root cause: Outdated, legacy crew-scheduling software failed to handle cascading flight cancellations caused by winter storms, forcing manual overrides that completely overwhelmed the system's scaling limits.
+
+(4) Scale of impact with numbers: Over 16,700 flights cancelled, affecting roughly 2 million passengers during the peak holiday travel season.
+
+(5) Financial or legal consequences: Pre-tax losses exceeding $1.4 billion and a record $140 million civil penalty issued by the U.S. Department of Transportation (DOT).
+
+(6) Who was responsible: Southwest Airlines executive management and IT leadership for neglecting legacy technology modernization.
+
+(7) How it was fixed and what prevention was added: Shifted to manual recovery operations; initiated multi-million dollar capital investments to completely modernize the crew scheduling software, upgrade automated recovery tools, and improve winter operational resilience.
+
+(8) Severity rating: Critical — Massive logistical breakdown, catastrophic operational failure, and severe financial penalties.
