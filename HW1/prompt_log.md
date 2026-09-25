@@ -202,6 +202,19 @@ For each branch, list the items exactly as the ISTQB syllabus names them.
 ```
 **Result:** `mindmap/mindmap_ai_original.md`. Three mistakes identified against the official v4.0 syllabus PDF: four test levels instead of five, black-box testing missing from the test types (with change-related testing wrongly listed as a type), and testing principle 5 garbled into "Pesticide paradox is destructive". Write-up: `mindmap/mindmap_3_mistakes.md`.
 
+### G11 - ~14:18 25/09/2026
+**Tool:** Gemini Flash-Lite (kem 2 anh chup cai quat lam dau vao)
+**Purpose:** R3 - de AI sinh test case cho quat, lam co so xac dinh 3 edge case AI bo sot
+**Prompt (verbatim):**
+```
+tạo test case cho tôi với Objective, Input, Steps, Expected result.
+Cover normal operation and edge cases
+```
+**Result:** 8 test case TC01-TC08. Luu tai `R3_device/mindmap_ai_original`-tuong duong: noi dung goc nam trong `R3_device/evidence/gemini_testcases_1..6.png`.
+Ba test case TC10, TC13, TC14 KHONG co trong danh sach nay - day la bang chung cho yeu cau "3 edge case AI khong tim ra".
+TC06 goc (Locked Rotor Test: chen cung canh quat, cap dien 30-60 phut) da bi loai vi khong an toan.
+**Ghi chu:** Gemini nhin thay ca 2 anh cai quat nhung khong sinh ra test case nao dua tren tieu chuan in tren tem thiet bi.
+
 ---
 
 ## Session 03 - Claude (Claude Code CLI, Opus 5): verification and drafting, 22-24/09/2026

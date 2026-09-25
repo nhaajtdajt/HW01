@@ -118,21 +118,51 @@ Hạ R1 xuống 33, R2 xuống 18, R3 xuống 20 → tổng **84**. Khoảng h�
 
 ## Remaining work
 
-**R2 — complete.** All 20 defects have a source screenshot and an AI-answer screenshot in `R2_defects/evidence/` (46 files).
+Toan bo noi dung R1, R2, R3 va mindmap da hoan tat. Con lai la phan hanh chinh.
 
-**R3 — in progress.** `R3_device/` holds:
-- `R3_TestCases_Checklist_Summary.xlsx` — 15 test cases (6 columns + origin + defect ID + video), submission checklist, Test Summary Report
-- `R3_bug_reports.md` — DEF-01…03 confirmed, DEF-04/05 candidates identified
-- `R3_video_plan.md` — which 5 test cases to film and how
-- `R3_edge_cases_explanation.md` — the 3 edge cases Gemini missed and why (draft, rewrite in your own words)
+### Bat buoc truoc khi nop
 
-Still to do, all of it hands-on and none of it AI-assistable:
-1. Photo of the fan **with your student ID card in the same frame**, plus a photo of the rating plate (brand, model, year, serial — mask the middle 4 characters).
-2. Screenshot Gemini's full list of 8 test cases — this is the evidence that it did not produce TC10, TC13, TC14.
-3. Run TC03, TC06, TC09, TC17 to reach **≥5 defects** (currently 3).
-4. Film **5 videos ≤60s with your own voice**, upload as YouTube Unlisted, paste the links into the Excel.
-5. Open 5 GitHub Issues, screenshot the Issues page showing your username.
+| # | Viec | Trang thai |
+|---|---|---|
+| 1 | Dien va ky `[AI-02]` AI Audit Report (docx) | ⬜ |
+| 2 | Dien va ky `[AI-03]` AI Disclosure Form (docx) | ⬜ |
+| 3 | Dien va ky `[AI-05]` AI Privacy Checklist (docx) | ⬜ |
+| 4 | `[AI-06]` Student Acknowledgement da ky tu Tuan 1 | ⬜ kiem tra lai - chua ky thi bai KHONG duoc cham |
+| 5 | Viet lai AI Critique bang loi sinh vien (§5) | 🟡 dang lam |
+| 6 | Dien 2 cho trong trong Mandatory Disclosure (§6) | 🟡 dang lam |
+| 7 | Xuat bao cao chinh ra PDF theo thu tu o dau file nay | ⬜ |
+| 8 | Nen `23120231_HW01_AI_089.zip` va nop Moodle | ⬜ |
 
-**Mindmap (G9.1) — done.** `mindmap/mindmap_ai_original.md` (AI version), `mindmap/mindmap_3_mistakes.md` (the three mistakes against ISTQB v4.0), `mindmap/qa_qc_mindmap_corrected.md` (the corrected mindmap to submit as PNG or Markdown). All 7 evidence screenshots are in `mindmap/evidence/`.
+### Tuy chon, nen lam
 
-**Templates to sign:** `[AI-02]`, `[AI-03]`, `[AI-05]` (and `[AI-06]` must already be signed from Week 1).
+| Viec | Ly do |
+|---|---|
+| Chup `def02_guard_removed_by_hand.jpg` | DEF-02 la defect nang nhat nhung hien chua co anh bang chung rieng. Rut dien, thao long truoc bang tay, chup 1 anh. 30 giay. |
+| Xuat mindmap ra PNG | De cho phep ca PNG lan Markdown. Dan `qa_qc_mindmap_corrected.md` vao markmap.js.org/repl roi export neu muon ban hinh. |
+| Doi repo GitHub sang Private | Repo dang chua anh the sinh vien va email ca nhan trong 11 anh R1. De chi yeu cau TA xem duoc, khong yeu cau public. |
+
+### Link 5 video (de dan vao bao cao)
+
+| Test case | Link |
+|---|---|
+| TC01 - ba cap gio va nut tat | https://youtube.com/shorts/JEd-FkanM2o |
+| TC02 - chot dung dao gio | https://youtube.com/shorts/eEpm26qTveE |
+| TC09 - chenh lech gio 3 cap | https://youtube.com/shorts/WYQW7PdwYas |
+| TC15 - day dau quat qua hanh trinh (DEF-03) | https://youtube.com/shorts/Dtg48KkCVdo |
+| TC10 - bam 2 nut lien tiep (DEF-01) | https://youtube.com/shorts/HPpBDBBYLWI |
+
+### Danh sach file trong zip
+
+```
+23120231_HW01_AI_089.zip
+├─ BaoCao_HW01.pdf                      <- ghep tu HW01_report_main.md + R1 + R2 + R3
+├─ AppendixA_prompt_log.md              <- prompt_log.md
+├─ R3_TestCases_Checklist_Summary.xlsx
+├─ [AI-02] AI Audit Report (da ky).pdf
+├─ [AI-03] AI Disclosure Form (da ky).pdf
+├─ [AI-05] AI Privacy Checklist (da ky).pdf
+├─ qa_qc_mindmap_corrected.md (hoac .png)
+├─ device_full_with_id.jpg
+├─ github_issues.png
+└─ evidence/                            <- 74 anh bang chung (R1 11, R2 47, R3 9, mindmap 7)
+```
