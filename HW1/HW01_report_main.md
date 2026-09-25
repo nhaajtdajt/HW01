@@ -23,7 +23,7 @@ Export in this order into one PDF:
 |---|---|---|---|
 | 1 | Requirement 1 — QA/QC Job Market 2026+ | `R1_job_market/R1_report.md` + `screenshots/` | ✅ Done |
 | 2 | Requirement 2 — 20 Software Defects | `R2_defects/R2_report.md` + `evidence/` | ✅ Done |
-| 3 | Requirement 3 — Physical product test design | `R3_device/` | 🟡 15 test cases ready · 6 executed · 3 defects · videos + photos pending |
+| 3 | Requirement 3 — Physical product test design | `R3_device/` | ✅ 15 designed · **15 executed** · 12 Pass / 3 Fail · 5 videos · 3 defects · GitHub Issues pending |
 | 4 | QA/QC role mindmap + 3 mistakes found (G9.1) | `mindmap/` | ✅ Done |
 | 5 | AI Audit Report summary | §4 below + `[AI-02]` docx | 🟡 Verdicts drafted - review them |
 | 6 | AI Critique (200–300 words) | §5 below | 🟡 Draft written - rewrite in your words |
@@ -57,24 +57,26 @@ Full working notes: `AI_audit_report_working.md`. Transfer into `template/[AI-02
 
 ---
 
-## 5. AI Critique (200-300 words)
+## 5. AI Critique (200–300 words)
 
-> **DRAFT written by Claude at the student's request.** Rewrite this in your own words before submitting - not to disguise its origin, but because a critique you did not write cannot be defended in the oral exam, where you will be asked to "point out 1 mistake the AI made that you corrected".
-> If you keep any of this wording, the Mandatory Disclosure below must say the critique was AI-drafted and student-revised. Do not claim it was written entirely by you.
+> **Bản nháp do Claude soạn theo yêu cầu của sinh viên.** Viết lại bằng lời của bạn trước khi nộp — vấn đáp sẽ hỏi *"chỉ ra 1 lỗi AI mà bạn đã sửa"*, và bài critique bạn không tự viết thì không trả lời trôi được.
+> Nếu giữ nguyên câu chữ ở đây, Mandatory Disclosure bên dưới phải ghi rõ là AI soạn nháp và sinh viên chỉnh sửa. Đừng khai là tự viết hoàn toàn.
 
 ---
 
-Trong HW01 em dùng hai công cụ AI với hai vai trò khác nhau: Claude để soạn bản nháp và đối chiếu nguồn, còn Gemini Flash-Lite để giải thích 20 sự cố rồi em đi tìm chỗ sai trong đó.
+Trong HW01 em dùng hai công cụ AI với hai vai trò khác nhau: Claude để soạn nháp và đối chiếu nguồn, Gemini Flash-Lite để giải thích 20 sự cố phần mềm và sinh test case cho cái quạt, rồi em đi tìm chỗ sai trong đó.
 
-Cả 20 giải thích của Gemini đều có ít nhất một chỗ sai kiểm chứng được. Nhưng thứ đáng chú ý với em không phải số lượng, mà là kiểu sai. Những dữ kiện nổi tiếng thì nó nhớ đúng: ngày CrowdStrike gây sập máy, con số 8,5 triệu thiết bị, mã CVE của EchoLeak, mức CVSS 9.3. Chỗ nó bịa lại là các chi tiết không ai thuộc lòng: tên hãng luật "Lebovits" (thật ra là Levidow, Levidow & Oberman), tên nhà cung cấp chatbot "Radiance" (thật ra là Fullpath), tên hệ thống "NERC" (thật ra là FPRSA-R), hay biện pháp khắc phục "historical accuracy parameters" mà Google chưa bao giờ công bố.
+Điểm tốt của AI là tốc độ và cấu trúc. Gemini sinh ra 8 test case đủ Objective, Input, Steps, Expected chỉ trong vài giây, việc mà em làm tay phải mất cả buổi. Với những dữ kiện nổi tiếng nó nhớ chính xác: ngày CrowdStrike gây sập máy, con số 8,5 triệu thiết bị, mã CVE-2025-32711 cùng mức CVSS 9.3. Có một lần em hỏi lại "nguồn của bạn là gì", nó tự rút lại khẳng định sai và nhận đó là "suy diễn kỹ thuật sai của tôi" — tức là nó sửa được khi bị chất vấn.
 
-Nặng nhất là lúc em hỏi nguồn cho con số "hơn 14 giờ". Nó dẫn tên Rolling Stone, Variety và CNN Business, trong khi Variety viết sự cố giảm dần sau khoảng ba tiếng, còn CNN dẫn lời Ticketmaster nói trang web không sập. Ngược lại, ở một chỗ khác chỉ cần hỏi "nguồn của bạn là gì" là nó tự rút lại: "đây là suy diễn kỹ thuật sai của tôi".
+Điểm chưa tốt thì nghiêm trọng hơn. Cả 20 giải thích đều có ít nhất một chỗ sai, và chỗ sai luôn rơi vào chi tiết không ai thuộc lòng: tên hãng luật "Lebovits" trong khi thật ra là Levidow, nhà cung cấp chatbot "Radiance" trong khi thật ra là Fullpath, hệ thống "NERC" trong khi thật ra là FPRSA-R. Nặng nhất là nó bịa con số "hơn 14 giờ" rồi gán cho Rolling Stone, Variety và CNN — mở Variety ra thì bài báo viết sự cố giảm dần sau khoảng ba tiếng.
 
-Em cũng thấy AI đi kiểm tra AI vẫn sai. Claude hai lần kết luận Gemini sai rồi phải rút lại, vì nó chỉ tìm bằng chứng ủng hộ kết luận có sẵn chứ không tìm bằng chứng ngược lại.
+Ở phần kiểm thử quạt, nó đề xuất chèn cứng cánh rồi cấp điện liên tục 30 đến 60 phút để thử cầu chì nhiệt, không kèm một dòng cảnh báo an toàn nào. Em đã loại test case đó.
 
-Thứ giải quyết mọi tranh cãi không phải AI nào cả, mà là tài liệu gốc: báo cáo hậu sự cố của chính công ty, báo cáo cơ quan quản lý, bản án của tòa, hồ sơ CVE. Nguyên tắc em rút ra, nói theo ngôn ngữ kiểm thử: câu trả lời của AI chỉ là giả thuyết, nguồn gốc mới là test oracle, và không được lấy chính hệ thống đang kiểm thử làm oracle cho nó.
+Em cũng thấy AI đi kiểm tra AI vẫn sai: Claude hai lần kết luận Gemini sai rồi phải rút lại, vì nó chỉ tìm bằng chứng ủng hộ kết luận có sẵn.
 
-*(khoảng 280 từ)*
+Bài học của em: AI dùng để dựng khung thì tốt, dùng làm nguồn sự thật thì không. Và câu hỏi rẻ nhất mà hiệu quả nhất là "nguồn của bạn là gì".
+
+*(khoảng 290 từ)*
 
 ---
 
