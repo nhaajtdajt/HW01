@@ -23,7 +23,7 @@ Export in this order into one PDF:
 |---|---|---|---|
 | 1 | Requirement 1 — QA/QC Job Market 2026+ | `R1_job_market/R1_report.md` + `screenshots/` | ✅ Done |
 | 2 | Requirement 2 — 20 Software Defects | `R2_defects/R2_report.md` + `evidence/` | ✅ Done |
-| 3 | Requirement 3 — Physical product test design | *not started* | ⬜ |
+| 3 | Requirement 3 — Physical product test design | `R3_device/` | 🟡 15 test cases ready · 6 executed · 3 defects · videos + photos pending |
 | 4 | QA/QC role mindmap + 3 mistakes found (G9.1) | `mindmap/` | ✅ Done |
 | 5 | AI Audit Report summary | §4 below + `[AI-02]` docx | 🟡 Verdicts drafted - review them |
 | 6 | AI Critique (200–300 words) | §5 below | 🟡 Draft written - rewrite in your words |
@@ -113,13 +113,18 @@ Prohibited-category artifacts in this submission, all produced by me without AI:
 
 **R2 — complete.** All 20 defects have a source screenshot and an AI-answer screenshot in `R2_defects/evidence/` (46 files).
 
-**R3 — not started.** Needs the physical device in hand:
-1. Choose one household device; note brand, model, year, serial number (mask the middle 4 characters).
-2. Photo of the device **with your student ID card in the same frame**.
-3. Design 15 test cases (Objective / Input / Steps / Expected / Actual / Verdict) in Excel.
-4. Ask an AI for test cases first, then add **≥ 3 edge cases it missed** — keep the screenshot of the AI conversation **plus** a written explanation of why it missed them.
-5. Execute **≥ 5** test cases on the real device, record videos **≤ 60s with your own voice**, upload as YouTube Unlisted.
-6. Find **≥ 5 defects** and log them as Issues in your own GitHub repo; screenshot the Issues page showing your GitHub username.
+**R3 — in progress.** `R3_device/` holds:
+- `R3_TestCases_Checklist_Summary.xlsx` — 15 test cases (6 columns + origin + defect ID + video), submission checklist, Test Summary Report
+- `R3_bug_reports.md` — DEF-01…03 confirmed, DEF-04/05 candidates identified
+- `R3_video_plan.md` — which 5 test cases to film and how
+- `R3_edge_cases_explanation.md` — the 3 edge cases Gemini missed and why (draft, rewrite in your own words)
+
+Still to do, all of it hands-on and none of it AI-assistable:
+1. Photo of the fan **with your student ID card in the same frame**, plus a photo of the rating plate (brand, model, year, serial — mask the middle 4 characters).
+2. Screenshot Gemini's full list of 8 test cases — this is the evidence that it did not produce TC10, TC13, TC14.
+3. Run TC03, TC06, TC09, TC17 to reach **≥5 defects** (currently 3).
+4. Film **5 videos ≤60s with your own voice**, upload as YouTube Unlisted, paste the links into the Excel.
+5. Open 5 GitHub Issues, screenshot the Issues page showing your username.
 
 **Mindmap (G9.1) — done.** `mindmap/mindmap_ai_original.md` (AI version), `mindmap/mindmap_3_mistakes.md` (the three mistakes against ISTQB v4.0), `mindmap/qa_qc_mindmap_corrected.md` (the corrected mindmap to submit as PNG or Markdown). All 7 evidence screenshots are in `mindmap/evidence/`.
 

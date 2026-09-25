@@ -206,3 +206,22 @@ The tool was reliable on **famous headline facts** (dates, totals, CVE numbers) 
 2. The same file listed testing principle 7 as "Absence-of-errors is a fallacy" — the v3.1 wording. The v4.0 syllabus renamed it **"Absence-of-defects fallacy"**. This was only caught when the student's screenshot of page 18 showed the principle in full.
 
 Both were corrected. Note the pattern: Claude reproduced **v3.1 wording while claiming to describe v4.0** — the same failure mode it had just documented in Gemini's mindmap.
+
+---
+
+## Artifact #10 - R3 fan test cases (Gemini) and the audit of them
+
+**(1) Prompt + Tool:** Gemini Flash-Lite, ~25/09/2026 - prompt asked for test cases for a 3-speed mechanical household fan with oscillation. Output: 8 test cases (TC01-TC08).
+**(2) AI Output:** `R3_device/evidence/gemini_testcases_*.png` (screenshots still to capture) - the 8 cases are reproduced in the Excel with origin marked per row.
+
+**(3) Verdict:** suggested **INVALID**.
+
+**(4) Reasoning:** one of the eight test cases is unsafe to execute. Gemini's TC06 ("Locked Rotor Test") instructs the student to jam the fan blade, energise the motor at maximum speed and hold that state for **30 to 60 minutes** to see whether the thermal fuse trips. A stalled induction motor draws locked-rotor current and dumps the heat into the winding; a consumer fan may have no working thermal cut-out left after years of use. This is a destructive type test that belongs in a laboratory with fire containment, and Gemini presented it as an ordinary step with **no safety warning and no question about the test environment**. Under ISTQB terms the test design ignored the risk of the test itself, not only the risk in the product.
+
+Two further cases were dropped for low defect-detection value: TC04 (pressing two speed buttons at once - the cam mechanism physically prevents the condition) and TC08 (10-degree incline - a pass is near certain and the device could topple).
+
+**(5) Student Fix:** the unsafe case was replaced by a noise-per-speed measurement; TC16 (cord, plug and strain relief per TCVN 5699-1) and TC17 (vibration and displacement over 10 minutes) were added. The final set is 15 test cases with the origin of each recorded in the Excel. Reasons for every removal are documented in the Test Summary Report sheet.
+
+**Detection record so far:** 6 test cases executed, 3 defects found - **all three from cases the student wrote** (TC10, TC14, TC15). None of Gemini's eight cases has found a defect yet.
+
+**Claude's contribution to this artifact (declare it):** TC06 replacement, TC16, TC17, the Excel workbook, the bug-report skeletons and the draft of `R3_edge_cases_explanation.md`. The device photo, the execution, the videos, the observed results and the bug report descriptions are the student's own - `[AI-01]` section 11 requires bug reports to be 100% student-written.
