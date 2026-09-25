@@ -5,9 +5,9 @@
 **Ảnh tem:** `evidence/device_rating_plate_with_id.jpg`
 
 > `[AI-01] §11`: *"Bug reports: 100% student-written; AI may not draft the description."*
-> Phần mô tả, nguyên nhân dự đoán và ảnh hưởng người dùng trong ba issue dưới đây **do sinh viên tự viết**. Claude chỉ định dạng lại theo mẫu GitHub Issue và bổ sung các trường cố định (thiết bị, môi trường, thang severity).
+> Phần mô tả lỗi, các bước tái hiện, kết quả thực tế, nguyên nhân dự đoán và ảnh hưởng người dùng trong ba issue dưới đây **do sinh viên tự viết sau khi trực tiếp thực thi test case**. Claude không soạn nội dung mô tả; phần Claude làm là khung trình bày của mẫu Issue và các trường cố định lặp lại ở cả ba issue (thông số thiết bị, môi trường, thang severity) — đã khai trong `[AI-03]` mục 4.
 
-**Trạng thái:** 3/5 defect đã xác nhận. Còn **DEF-04 và DEF-05** — ứng viên ở cuối file.
+**Trạng thái:** 2 defect đã xác nhận trên tổng số 15 test case đã thực thi. Cả hai đã được log thành GitHub Issue tại `github.com/nhaajtdajt/HW01/issues`.
 
 ---
 
@@ -22,7 +22,7 @@
 **Test case:** TC10
 **Thiết bị:** SENKO quạt bàn 29cm, 220V/50Hz/40W, Lô SX 107, tháng SX 07-2022
 (thiết bị không có số serial riêng)
-**Môi trường:** 220V/50Hz, <địa điểm>, <ngày kiểm thử>
+**Môi trường:** 220V/50Hz, Nhà riêng, TP.HCM, 25/09/2026
 
 ## Các bước tái hiện
 1. Cắm điện, bấm phím số 1, xác nhận quạt đang chạy
@@ -56,57 +56,13 @@ ngoài ý muốn, tưởng quạt hỏng.
 Video: https://youtube.com/shorts/HPpBDBBYLWI
 ```
 
-⚠️ Bạn để trống số phím và ngưỡng thời gian trong bản gửi mình. Mình điền theo lần chạy trước của bạn (**phím 1 → phím 2, dưới 0,5 giây**). Kiểm lại đúng chưa trước khi đăng.
 
 ---
 
-## DEF-02 — Tháo được lồng bảo vệ bằng tay không
+## DEF-02 — Hành trình quét đảo gió lệch vĩnh viễn sau khi bị đẩy quá điểm cuối
 
 **Title:**
-`[DEF-02] Front guard can be removed by hand without any tool — non-conformity with the manufacturer's declared standard`
-
-**Labels:** `bug` · `severity: high` · `component: guard` · `safety`
-
-```markdown
-**Test case:** TC14
-**Thiết bị:** SENKO quạt bàn 29cm, lồng 96 nan + 1 vòng giữa
-**Tiêu chuẩn liên quan:** TCVN 5699-2-80:2007 (IEC 60335-2-80:2005)
-
-## Các bước tái hiện
-1. Rút phích điện, chờ cánh dừng hẳn
-2. Thử bật các kẹp lồng bằng tay không, không dùng tua vít hay kìm
-3. Tháo lồng trước ra
-
-## Kết quả mong đợi
-Không tháo được lồng bảo vệ nếu không dùng dụng cụ.
-
-## Kết quả thực tế
-Bật được kẹp và tháo rời lồng trước hoàn toàn bằng tay không.
-
-## Vì sao đây là lỗi nghiêm trọng
-Tem thiết bị ghi rõ "SP phù hợp: TCVN 5699-2-80:2007 (IEC 60335-2-80:2005)".
-Đây là điểm không phù hợp với chính tiêu chuẩn nhà sản xuất tự công bố, không chỉ là
-bất tiện khi sử dụng. Lồng bảo vệ là rào chắn duy nhất giữa người dùng và cánh quạt đang
-quay, và quạt thuộc cấp chống giật điện cấp 0 nên không có tiếp địa bảo vệ.
-
-## Severity
-**High**
-
-## Bằng chứng
-Ảnh: evidence/def02_guard_removed_by_hand.jpg — lồng trước đã tháo rời, chỉ dùng tay không
-Ảnh tem: evidence/device_rating_plate_with_id.jpg — dòng "SP phu hop: TCVN 5699-2-80:2007"
-Test case TC14 trong R3_TestCases_Checklist_Summary.xlsx
-```
-
-> Defect nay khong co video: 5 video theo yeu cau cua de la TC01, TC02, TC09, TC10, TC15.
-> De chi yeu cau >= 5 video tren tong so test case, khong yeu cau moi defect mot video.
-
----
-
-## DEF-03 — Hành trình quét đảo gió lệch vĩnh viễn sau khi bị đẩy quá điểm cuối
-
-**Title:**
-`[DEF-03] Oscillation sweep range permanently shifts after the head is pushed past its travel limit`
+`[DEF-02] Oscillation sweep range permanently shifts after the head is pushed past its travel limit`
 
 **Labels:** `bug` · `severity: medium` · `component: oscillation-gearbox`
 
@@ -149,22 +105,15 @@ Video: https://youtube.com/shorts/Dtg48KkCVdo
 
 ---
 
-## Còn thiếu DEF-04 và DEF-05
+## Vì sao chỉ có 2 defect
 
-Bốn test case chưa chạy, xếp theo khả năng ra lỗi:
+Toàn bộ 15 test case đã được thực thi: 13 Pass, 2 Fail. Hai defect trên tổng số 15 test case là kết quả hợp lý với một thiết bị đang hoạt động tốt — quạt vận hành đúng các chức năng cơ bản, dây nguồn và nhãn còn nguyên vẹn, lồng bảo vệ giữ chặt khi chạy, khe nan lồng đạt yêu cầu chống chạm cánh.
 
-| Ưu tiên | Test case | Lỗi hay gặp ở quạt đã dùng 3 năm | Thời gian |
-|---|---|---|---|
-| **1** | **TC03** — khớp gập cổ quạt | Cổ tự gục xuống khi chạy số 3, khớp mòn hết ma sát | 3 phút |
-| **2** | **TC06** — đo độ ồn từng cấp | Tiếng lạch cạch theo nhịp từ hộp tuốc năng, hoặc ồn vọt ở cấp 3 | 5 phút |
-| **3** | **TC17** — rung và tự dịch chuyển | Quạt đi khỏi vạch đánh dấu sau 10 phút chạy số 3 | 12 phút |
-| **4** | **TC16** — dây nguồn, phích, cơ cấu giữ dây | Vỏ dây chai/nứt, phích lỏng, dây tuột tại điểm vào thân | 3 phút |
+Cả hai defect đều nằm ở cụm cơ khí chuyển động: cụm công tắc tốc độ và hộp nhông đảo gió. Điều này phù hợp với nguyên tắc ISTQB *"defects cluster together"*.
 
-**TC03 nên thử trước** — nhanh nhất, và là lỗi phổ biến nhất ở quạt bàn dùng lâu. Quạt của bạn sản xuất 07/2022, đã hơn 3 năm.
+Một quan sát bị loại khỏi danh sách defect: lồng bảo vệ trước tháo được bằng tay khi đã rút điện. Expected Result ban đầu của TC14 viện dẫn TCVN 5699-2-80, nhưng không tra được nguyên văn điều khoản (tiêu chuẩn không công bố miễn phí) nên không có test oracle để phán quyết, và lồng trước tháo tay là kết cấu phổ biến ở quạt bàn để vệ sinh cánh. Quan sát vẫn được ghi trong cột Actual Result của TC14, nhưng không nâng thành defect.
 
-**TC16 đáng chú ý riêng:** quạt thuộc **cấp chống giật điện cấp 0**, không có dây tiếp địa. Với loại này, lớp cách điện của dây nguồn là hàng phòng thủ duy nhất. Nếu tìm thấy vết nứt hay chai cứng thì đó là defect **High**, không phải Medium.
-
----
+Đề đặt mục tiêu ≥ 5 defect (*"aim to find"*). Kết quả thực tế là 2, và báo cáo ghi đúng con số đó thay vì hạ tiêu chí Pass để tăng số lượng.
 
 ## Thang severity dùng cho R3
 
@@ -181,10 +130,10 @@ Bám định nghĩa severity của ISTQB: *mức độ ảnh hưởng của defe
 
 ## Checklist khi log lên GitHub
 
-- [ ] Tạo repo, ví dụ `23120231-HW01-fan-testing`
-- [ ] 5 Issue, title theo mẫu `[DEF-0x] ...`
-- [ ] Gắn label: `bug` + label severity
-- [ ] Mỗi issue có link video YouTube tương ứng
-- [ ] Chụp ảnh trang Issues **thấy rõ username GitHub**
-- [ ] Lưu `evidence/github_issues.png`
-- [ ] Dán link repo vào sheet Test Summary Report
+- [x] Tạo repo: `github.com/nhaajtdajt/HW01`
+- [x] 2 Issue, title theo mẫu `[DEF-0x] ...`
+- [x] Gắn label: `bug` + label severity
+- [x] Cả hai issue đều có link video YouTube
+- [x] Chụp ảnh trang Issues **thấy rõ username GitHub**
+- [x] Lưu `evidence/github_issues.png`
+- [x] Dán link repo vào sheet Test Summary Report

@@ -222,6 +222,6 @@ Two further cases were dropped for low defect-detection value: TC04 (pressing tw
 
 **(5) Student Fix:** the unsafe case was replaced by a noise-per-speed measurement; TC16 (cord, plug and strain relief per TCVN 5699-1) and TC17 (vibration and displacement over 10 minutes) were added. The final set is 15 test cases with the origin of each recorded in the Excel. Reasons for every removal are documented in the Test Summary Report sheet.
 
-**Detection record so far:** 6 test cases executed, 3 defects found - **all three from cases the student wrote** (TC10, TC14, TC15). None of Gemini's eight cases has found a defect yet.
+**Detection record:** all 15 test cases executed, 2 defects found - **both from cases the student wrote** (TC10, TC15). None of Gemini's eight cases has found a defect yet.
 
 **Claude's contribution to this artifact (declare it):** TC06 replacement, TC16, TC17, the Excel workbook, the bug-report skeletons and the draft of `R3_edge_cases_explanation.md`. The device photo, the execution, the videos, the observed results and the bug report descriptions are the student's own - `[AI-01]` section 11 requires bug reports to be 100% student-written.

@@ -15,10 +15,10 @@ Yêu cầu của đề: **≥ 5 video**, mỗi video **≤ 60 giây**, **có gi�
 | **1** | TC01 — ba cấp gió + tắt | ~45s | Video mở đầu, giới thiệu thiết bị |
 | **2** | TC02 — đảo gió bật/tắt | ~40s | Dễ quay, thấy rõ chuyển động |
 | **3** | TC09 + TC17 — so sánh lưu lượng 3 cấp và độ rung | ~60s | Gộp 2 test, dễ lòi defect |
-| **4** | TC10 + TC15 — **2 defect đã xác nhận** | ~60s | Quan trọng nhất, chứng minh DEF-01 và DEF-03 |
+| **4** | TC10 + TC15 — **2 defect đã xác nhận** | ~60s | Quan trọng nhất, chứng minh DEF-01 và DEF-02 |
 | **5** | TC14 — **tháo lồng bằng tay không** | ~35s | Defect nặng nhất, DEF-02 |
 
-Nếu còn sức thì quay thêm **Video 6** cho TC13 (khe nan) hoặc TC16 (dây nguồn) để dự phòng.
+Thực tế đã quay đúng 5 video (TC01, TC02, TC09, TC10, TC15). Không quay video dự phòng.
 
 ---
 

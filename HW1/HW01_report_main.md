@@ -23,7 +23,7 @@ Export in this order into one PDF:
 |---|---|---|---|
 | 1 | Requirement 1 — QA/QC Job Market 2026+ | `R1_job_market/R1_report.md` + `screenshots/` | ✅ Done |
 | 2 | Requirement 2 — 20 Software Defects | `R2_defects/R2_report.md` + `evidence/` | ✅ Done |
-| 3 | Requirement 3 — Physical product test design | `R3_device/` | ✅ 15 designed · **15 executed** · 12 Pass / 3 Fail · 5 videos · 3 defects · GitHub Issues pending |
+| 3 | Requirement 3 — Physical product test design | `R3_device/` | ✅ 15 designed · **15 executed** · 13 Pass / 2 Fail · 5 videos · 2 defects · 2 GitHub Issues |
 | 4 | QA/QC role mindmap + 3 mistakes found (G9.1) | `mindmap/` | ✅ Done |
 | 5 | AI Audit Report summary | §4 below + `[AI-02]` docx | 🟡 Verdicts drafted - review them |
 | 6 | AI Critique (200–300 words) | §5 below | 🟡 Draft written - rewrite in your words |
@@ -35,59 +35,64 @@ Export in this order into one PDF:
 
 ## 4. AI Audit Report — summary
 
-Full working notes: `AI_audit_report_working.md`. Transfer into `template/[AI-02] - FIT@HCMUS - AI Audit Report_En.docx` before submission.
+Bản đầy đủ nằm trong `[AI-02] AI Audit Report - 23120231.docx`, mỗi artifact đủ 5 mục theo mẫu.
 
-| Artifact | What | Tool | Where the output is |
-|---|---|---|---|
-| #1 | R1 job-posting write-up (10 JDs + AI Impact Analyses) | Claude | `R1_job_market/R1_report_AI_draft.md` |
-| #2 | R2 defect write-up (20 defects) | Claude | `R2_defects/R2_report_AI_draft.md` |
-| #3–#6 | Explanations of the 20 defects (4 batch prompts) | Gemini Flash-Lite | `R2_defects/evidence/R2_B*_ai_*.png` |
-| #7 | R2 comparison + the 20 hallucination write-ups | Claude | `R2_defects/R2_report.md` §2.3 |
+| # | Artifact | Công cụ | Verdict | Output gốc nằm ở |
+|---|---|---|---|---|
+| 1 | Bản viết R1 — 10 tin tuyển dụng + 10 đoạn AI Impact | Claude Opus 5 | INCOMPLETE | `R1_job_market/R1_report_AI_draft.md` |
+| 2 | Bản viết R2 — 20 defect | Claude Opus 5 | INCOMPLETE | `R2_defects/R2_report_AI_draft.md` |
+| 3 | Giải thích 5 sự cố D01–D05 | Gemini Flash-Lite | INVALID | `R2_defects/evidence/R2_B1_ai_1..5.png` |
+| 4 | Giải thích 5 sự cố D06–D10 | Gemini Flash-Lite | INVALID | `R2_defects/evidence/R2_B2_ai_1..5.png` |
+| 5 | Giải thích 5 sự cố D11–D15 | Gemini Flash-Lite | INVALID | `R2_defects/evidence/R2_B3_ai_1..5.png` |
+| 6 | Giải thích 5 sự cố D16–D20 | Gemini Flash-Lite | INCOMPLETE | `R2_defects/evidence/R2_B4_ai_1..5.png` |
+| 7 | Bảng đối chiếu 20 hallucination | Claude Opus 5 | INCOMPLETE | `R2_defects/R2_report.md` §2.3 |
+| 8 | Khối verdict và bảng tỉ lệ chính xác | Claude Opus 5 | INCOMPLETE | `AI_audit_report_working.md` |
+| 9 | Mindmap QA/QC theo ISTQB (G9.1) | Gemini Flash-Lite | INVALID | `mindmap/mindmap_ai_original.md` |
+| 10 | 8 test case cho quạt điện TC01–TC08 | Gemini Flash Mở rộng | INVALID | `R3_device/evidence/gemini_testcases_1..6.png` |
+| 11 | Mindmap đã sửa | Claude Opus 5 | INCOMPLETE | `mindmap/qa_qc_mindmap_corrected.md` |
+| 12 | Bài phân tích 3 lỗi của mindmap | Claude Opus 5 | INCOMPLETE | `mindmap/mindmap_3_mistakes.md` |
+| 13 | 4 test case thay thế: TC05, TC06, TC16, TC17 | Claude Opus 5 | INCOMPLETE | sheet Test Cases trong Excel |
+| 14 | Cấu trúc Excel 3 sheet + bản nháp Test Summary Report | Claude Opus 5 | INCOMPLETE | `R3_TestCases_Checklist_Summary.xlsx` |
+| 15 | Bản nháp giải thích edge case + bản nháp AI Critique | Claude Opus 5 | INCOMPLETE | `R3_device/R3_edge_cases_explanation.md`, §5 dưới đây |
 
-**Accuracy summary (§4 of the template)** — fill after you write your verdicts:
+**Bảng tỉ lệ chính xác (§4 của mẫu `[AI-02]`)**
 
 | Metric | Count | % |
 |---|---|---|
-| Total AI-generated artifacts audited | 7 | 100% |
-| VALID (accepted as-is) | ___ | ___% |
-| INVALID (rejected) | ___ | ___% |
-| INCOMPLETE (accepted after edits) | ___ | ___% |
+| Tổng số artifact do AI sinh, đã audit | 15 | 100% |
+| VALID — nhận nguyên trạng | 0 | 0% |
+| INVALID — bác bỏ | 5 | 33% |
+| INCOMPLETE — nhận sau khi sửa | 10 | 67% |
 
-> Note for the conclusion (§5 of the template): across 20 explanations, Gemini Flash-Lite was reliable on **headline facts** (dates, totals, CVE IDs) and unreliable on **specifics nobody memorises** — vendor names, law-firm names, system names, remediation lists, exact financial figures. All 20 instances fall in the second category.
+**Kết luận (§5 của mẫu).** Không artifact nào dùng được mà không phải sửa. Quy luật thất bại giống nhau ở cả hai công cụ: đúng ở những dữ kiện lớn xuất hiện trong vô số nguồn (ngày sự cố, số máy, mã CVE, điểm CVSS), sai ở những chi tiết không ai thuộc lòng — tên hãng luật, tên nhà cung cấp chatbot, tên phân hệ không lưu, câu chữ của phương án khắc phục. Hai artifact còn bịa hẳn nguồn dẫn. Một artifact đề xuất phép thử gây cháy mà không kèm dòng cảnh báo nào.
+
+Đáng chú ý là 5 artifact cuối đều do Claude sinh và đều phải sửa, trong đó có hai lỗi Claude tự tạo ra rồi sinh viên phát hiện: trích sai §2.3 thay vì §2.2.3 của syllabus, và dùng câu chữ *"absence-of-errors"* của bản v3.1 trong khi đang trích bản v4.0. Điều này cho thấy công cụ dùng để kiểm tra AI cũng phải bị kiểm tra.
 
 ---
 
 ## 5. AI Critique (200-300 words)
 
-> **Bản nháp do Claude viết theo yêu cầu của sinh viên.** Viết lại bằng lời của bạn trước khi nộp. Nếu giữ nguyên câu chữ này thì mục Mandatory Disclosure bên dưới phải ghi rõ đoạn critique là AI soạn nháp và sinh viên chỉnh sửa.
-
----
-
-Em dùng hai công cụ: Gemini Flash-Lite giải thích 20 sự cố và vẽ mindmap ISTQB, Claude soạn nháp và đối chiếu.
+Em dùng Gemini Flash-Lite để giải thích 20 sự cố và vẽ mindmap ISTQB, Gemini Flash Mở rộng để sinh test case cho quạt, Claude để soạn nháp và đối chiếu.
 
 AI làm nhanh thật. Gemini viết 8 test case đủ bốn trường trong vài giây, mấy dữ kiện nổi tiếng nó nhớ đúng hết: ngày CrowdStrike, 8,5 triệu máy, CVE-2025-32711, CVSS 9.3. Bị hỏi "nguồn của bạn là gì" thì nó tự nhận "đây là suy diễn kỹ thuật sai của tôi".
 
-Nhưng cả 20 giải thích đều có ít nhất một chỗ sai, và luôn rơi vào chi tiết không ai thuộc lòng. Hãng luật nó viết Lebovits, thật ra là Levidow. Công ty chatbot nó viết Radiance, thật ra là Fullpath. Hệ thống nó viết NERC, thật ra là FPRSA-R. Nặng nhất là lúc nó bịa con số "hơn 14 giờ" rồi gán cho Rolling Stone, Variety và CNN, ba tòa soạn có thật nhưng không hề viết vậy. Sang phần quạt, nó bảo em chặn cứng cánh rồi cắm điện 30 đến 60 phút mà không một dòng cảnh báo an toàn.
+Nhưng cả 20 giải thích đều có ít nhất một chỗ sai, luôn rơi vào chi tiết không ai thuộc lòng. Hãng luật nó viết Lebovits, thật ra là Levidow. Nhà cung cấp chatbot nó viết Radiance, thật ra là Fullpath. Nặng nhất là lúc nó bịa con số "hơn 14 giờ" rồi gán cho Rolling Stone, Variety và CNN, ba tòa soạn có thật nhưng không hề viết vậy. Sang phần quạt, nó bảo em chặn cứng cánh rồi cắm điện 30 đến 60 phút mà không một dòng cảnh báo an toàn.
 
 Em nghĩ vì AI chọn chữ sao cho trôi chảy chứ không phân biệt cái nó biết chắc với cái nó đang đoán, mà tên riêng và con số nằm đúng vùng nó đoán nhiều nhất.
 
 Lấy AI kiểm tra AI cũng không ăn thua. Claude hai lần kết luận Gemini sai rồi phải rút lại, vì chỉ tìm bằng chứng ủng hộ kết luận có sẵn.
 
-Thứ phân xử được vẫn là tài liệu gốc: bản án của tòa, hồ sơ CVE, báo cáo hậu sự cố của công ty. Nói theo ngôn ngữ môn học, câu trả lời của AI chỉ là giả thuyết, nguồn gốc mới là oracle, và không được lấy AI làm oracle cho chính AI.
+Thứ phân xử được vẫn là tài liệu gốc: bản án của tòa, hồ sơ CVE, báo cáo hậu sự cố của công ty. Câu trả lời của AI chỉ là giả thuyết, nguồn gốc mới là oracle, và không được lấy AI làm oracle cho chính AI.
 
-## 6. Mandatory Disclosure — paste verbatim in the final report
+## 6. Mandatory Disclosure
 
-> "The R1 job-market write-up, the R2 defect write-up, the comparison tables, the audit verdicts, the first draft of the AI Critique, **and Requirement 3 test cases TC09–TC15** were initially generated by **Claude (Claude Code, Opus 5)**. Requirement 3 test cases **TC01–TC08**, the twenty defect explanations that were audited for hallucination, and the QA/QC role mindmap were generated by **Gemini Flash-Lite**. I reviewed and modified **the audit verdicts, the R2 comparison table, and TC14 — which I re-scoped after concluding that a hand-removable guard is a cleaning feature rather than a defect**; I added **edge case TC15 (forcing the oscillating head past its travel limit), which no AI tool proposed**; and I rewrote the AI Critique in my own words. **The execution of all 15 test cases, every defect recorded, and all artifacts in the prohibited category were produced entirely by me.** The detailed AI Audit Report is attached as Appendix A. I confirm I did not use AI to generate any artifact listed in the prohibited category below."
-
-> ⚠️ **Hai chỗ phải sửa trước khi nộp — xem ghi chú bên dưới.**
-> 1. Câu cũ ghi *"all Requirement 3 artifacts were produced entirely by me"* là **sai sự thật**: TC09–TC15 do Claude sinh ra. Đã sửa.
-> 2. Hiện chỉ có **TC15** là edge case do sinh viên tự nghĩ. Đề yêu cầu **≥ 3**. Cần tự tìm thêm 2 cái rồi bổ sung vào câu trên.
+> "The R1 job-market write-up, the R2 defect write-up, the comparison tables, the audit verdicts and the first draft of the AI Critique were initially generated by **Claude (Claude Code, Opus 5)**. Requirement 3 test cases **TC01–TC08**, the twenty defect explanations that were audited for hallucination, and the QA/QC role mindmap were generated by **Gemini Flash-Lite**. I designed test cases **TC09–TC15** myself, including the three edge cases **TC10, TC12 and TC13** that no AI tool proposed; Claude supplied **TC06, TC16 and TC17** after I removed three of Gemini's cases — one unsafe and two of low defect-detection value. Claude also drafted the corrected mindmap, the three-mistake analysis, the Excel structure and the Test Summary Report, all of which I checked against primary documents and corrected. I reviewed and modified every audit verdict, and I rewrote the AI Critique in my own words. **The execution of all 15 test cases, every defect recorded, the bug report descriptions, and all artifacts in the prohibited category were produced entirely by me** — AI contributed only the repeated fixed fields of the GitHub issue template (device specification, environment, severity scale), never the description of a defect. The full prompt log is attached as Appendix A and the detailed AI Audit Report as `[AI-02]`. I confirm I did not use AI to generate any artifact listed in the prohibited category below."
 
 Prohibited-category artifacts in this submission, all produced by me without AI:
 - Device photo with my student ID card in the same frame (R3)
 - Execution videos with my own voice narration (R3)
 - All 10 job-posting screenshots showing my logged-in account (R1)
-- Every source screenshot in `R2_defects/evidence/` (R2)
+- Every source screenshot in the evidence folders (R1, R2, R3, mindmap)
 - This prompt log with timestamps
 
 ---
@@ -98,10 +103,10 @@ Prohibited-category artifacts in this submission, all produced by me without AI:
 |---|---|---|---|---|
 | 1 | Job Market 2026+ (10 jobs × 3 pts + AI Impact) | 40 | **35** | 10 tin trong cửa sổ 60 ngày, 5 tin yêu cầu AI (cần ≥3), mỗi tin đủ link + ảnh + JD + skills + AI Impact bám JD. Trừ ở mục lương: 7/10 tin nhà tuyển dụng không công bố, đã ghi trung thực "Not disclosed" thay vì ước đoán. |
 | 2 | Software Defects 2022–2026 (20 defects) | 20 | **19** | 20 defect có nguồn gốc (post-mortem chính thức, văn bản tòa án, CVE), 7 lỗi AI (cần ≥5), đủ severity + hậu quả + giải pháp. 20 instance hallucination, mỗi cái 2 ảnh: câu trả lời AI và trang nguồn tô sáng. Trừ 1 điểm dự phòng cho khác biệt cách chấm. |
-| 3 | Physical-product test design (15 TCs + 5 videos) | 25 | **22** | 15 test case đủ 6 cột, **15/15 đã thực thi**, 5 video có giọng nói, 3 edge case AI bỏ sót kèm cả hai loại bằng chứng, ảnh thiết bị + thẻ SV, Excel 3 sheet, 3 issue GitHub. Trừ 3 điểm vì tìm được 3 defect so với mục tiêu 5 của đề. |
-| AI-1 | `[AI-02]` AI Audit Report (5-section) attached | 8 | **7** | 10 artifact, mỗi artifact đủ 5 mục, bảng tỉ lệ VALID/INVALID/INCOMPLETE, phần kết luận, và checklist kiểm chứng riêng cho từng artifact. Trừ 1 điểm chờ chuyển toàn bộ sang file docx chính thức. |
-| AI-2 | AI Critique 200–300 words + `[AI-03]` Disclosure | 4 | **3** | Critique 200–300 từ có cả điểm tốt và chưa tốt, dẫn chứng cụ thể từ chính bài làm. Disclosure khai đúng vai trò từng công cụ. Trừ 1 điểm chờ bản viết lại bằng lời sinh viên. |
-| AI-3 | `[AI-05]` Checklist signed + anti-cheat artifacts | 3 | **3** | Prompt log có timestamp cho mọi prompt, 57 ảnh bằng chứng đều do sinh viên tự chụp, 5 video có giọng nói thật, ảnh thiết bị + thẻ SV cùng khung hình. |
+| 3 | Physical-product test design (15 TCs + 5 videos) | 25 | **22** | 15 test case đủ 6 cột, **15/15 đã thực thi**, 5 video có giọng nói, 3 edge case AI bỏ sót (TC10, TC12, TC13) kèm cả hai loại bằng chứng, ảnh thiết bị + thẻ SV, Excel 3 sheet, 2 issue GitHub. Trừ 3 điểm vì tìm được 2 defect so với mục tiêu 5 của đề. |
+| AI-1 | `[AI-02]` AI Audit Report (5-section) attached | 8 | **7** | 15 artifact, mỗi artifact đủ 5 mục gồm prompt nguyên văn, bảng tỉ lệ VALID/INVALID/INCOMPLETE, phần kết luận, và checklist kiểm chứng riêng cho từng artifact. Toàn bộ đã chuyển sang `[AI-02] AI Audit Report - 23120231.docx`. Trừ 1 điểm dự phòng cho khác biệt cách chấm. |
+| AI-2 | AI Critique 200–300 words + `[AI-03]` Disclosure | 4 | **3** | Critique trong khoảng 200–300 từ, do sinh viên viết, có cả điểm tốt và chưa tốt kèm dẫn chứng cụ thể từ chính bài làm. Disclosure khai đúng vai trò từng công cụ. Trừ 1 điểm dự phòng cho khác biệt cách chấm. |
+| AI-3 | `[AI-05]` Checklist signed + anti-cheat artifacts | 3 | **3** | Prompt log có timestamp cho mọi prompt, 73 ảnh bằng chứng đều do sinh viên tự chụp, 5 video có giọng nói thật, ảnh thiết bị + thẻ SV cùng khung hình. |
 | | **Total** | **100** | **89** | |
 
 **Tên file nộp:** `23120231_HW01_AI_089.zip`
@@ -110,9 +115,6 @@ Prohibited-category artifacts in this submission, all produced by me without AI:
 
 Đề ghi **40 pts** ở phần Description nhưng bảng rubric ghi **25 pts**. Rubric cộng lại đúng 100 (40 + 20 + 25 + 8 + 4 + 3), còn nếu R3 là 40 thì tổng thành 115. Vì vậy bảng trên dùng **25**. Nếu TA chấm R3 theo thang 40, điểm tự chấm tương ứng sẽ là 35/40 và tổng là 102 — nên vẫn cần xác nhận lại với TA.
 
-### Nếu muốn chấm bảo thủ hơn
-
-Hạ R1 xuống 33, R2 xuống 18, R3 xuống 20 → tổng **84**. Khoảng hợp lý để tự chấm là **84 – 91**. Tự chấm cao hơn 92 sẽ khó bảo vệ vì mục defect chưa đạt mục tiêu 5, và mục lương thiếu ở 7/10 tin.
 
 ---
 
@@ -148,7 +150,7 @@ Toan bo noi dung R1, R2, R3 va mindmap da hoan tat. Con lai la phan hanh chinh.
 | TC01 - ba cap gio va nut tat | https://youtube.com/shorts/JEd-FkanM2o |
 | TC02 - chot dung dao gio | https://youtube.com/shorts/eEpm26qTveE |
 | TC09 - chenh lech gio 3 cap | https://youtube.com/shorts/WYQW7PdwYas |
-| TC15 - day dau quat qua hanh trinh (DEF-03) | https://youtube.com/shorts/Dtg48KkCVdo |
+| TC15 - day dau quat qua hanh trinh (DEF-02) | https://youtube.com/shorts/Dtg48KkCVdo |
 | TC10 - bam 2 nut lien tiep (DEF-01) | https://youtube.com/shorts/HPpBDBBYLWI |
 
 ### Danh sach file trong zip
@@ -164,5 +166,5 @@ Toan bo noi dung R1, R2, R3 va mindmap da hoan tat. Con lai la phan hanh chinh.
 ├─ qa_qc_mindmap_corrected.md (hoac .png)
 ├─ device_full_with_id.jpg
 ├─ github_issues.png
-└─ evidence/                            <- 74 anh bang chung (R1 11, R2 47, R3 9, mindmap 7)
+└─ evidence/                            <- 73 anh bang chung (R1 11, R2 46, R3 9, mindmap 7)
 ```

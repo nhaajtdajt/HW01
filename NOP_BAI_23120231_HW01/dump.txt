@@ -1,0 +1,15 @@
+TC01 : Mỗi lần nhấn: phím mới chìm xuống, phím cũ nảy lên hết. Tốc độ tăng dần qua 3 cấp. Nhấn 0 thì động cơ ngắt, cánh giảm tốc theo quán tính rồi dừng. Không rè, không rung bất thường.
+TC02 : Ấn chốt: đầu quạt quét mượt trái-phải, biên độ khoảng 80-90 độ, không va đập, không kẹt bánh răng. Kéo chốt: dừng quét ngay tại vị trí hiện tại, cánh vẫn quay bình thường.
+TC03 : Khớp giữ nguyên góc trong 30 giây ở cả hai vị trí, không tự trôi hoặc gục xuống dưới phản lực gió.
+TC05 : Toàn bộ thông tin bắt buộc còn đọc được rõ ràng. Tem bám chắc, không bong góc, chữ không nhòe sau khi chà nhẹ.
+TC06 : Độ ồn tăng dần theo cấp. Chỉ có tiếng gió và tiếng động cơ đều, không có tiếng lạch cạch theo nhịp, không rít, không va đập.
+TC07 : Không có tia lửa lớn tại chân phích. Động cơ khởi động lại êm, cánh đạt lại tốc độ bình thường, không kẹt rotor, không ù kéo dài.
+TC09 : Góc bay của dải giấy tăng rõ rệt qua từng cấp. Không có hai cấp nào cho góc bay gần như bằng nhau.
+TC10 : Quạt chuyển sang cấp 2 và tiếp tục chạy. Không được rơi về trạng thái tắt, không được kẹt giữa hai phím.
+TC11 : Cánh tự quay trong vòng 2 giây, không cần quay mồi, không phát tiếng ù kéo dài.
+TC12 : Quạt quét được ở cả ba cấp. Biên độ quét ở ba cấp bằng nhau, sai lệch không đáng kể.
+TC13 : Không vị trí nào đưa ngón tay chạm được vào cánh quạt.
+TC14 : Lồng bảo vệ tháo được bằng tay không khá dễ dàng, các chốt nhựa có thể bật ra bằng ngón tay.
+TC15 : Quạt quét lại đúng biên độ ban đầu, hai điểm cuối trùng với vạch đánh dấu.
+TC16 : Vỏ cách điện liền lạc, không nứt, không chai, không cháy. Chân phích thẳng và chắc. Dây không xê dịch tại điểm vào thân, không lộ lõi đồng.
+TC17 : Đồng xu không trượt khỏi đế. Chân đế không lệch khỏi vạch đánh dấu. Thân quạt không rung lắc thấy rõ bằng mắt.

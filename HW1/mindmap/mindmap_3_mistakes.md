@@ -4,7 +4,7 @@
 **Checked against:** ISTQB Certified Tester Foundation Level syllabus **v4.0**, dated 2023-04-21
 ([official download](https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/) · [direct PDF copy](https://www.gasq.org/files/content/gasq/downloads/certification/ISTQB/Foundation%20Level/ISTQB_CTFL_Syllabus-v4.0%20.pdf))
 
-> ⚠️ **Check the syllabus edition your class uses before submitting.** Mistakes 1 and 2 below are mistakes **against v4.0**. In the older v3.1 syllabus there were four test levels and the test types were functional / non-functional / white-box / change-related — exactly what the AI produced. Mistake 3 is wrong in **every** edition, so it is the safest of the three. Mistake 4 is kept as a spare.
+> **Ghi chú về phiên bản syllabus:** ba lỗi dưới đây được đối chiếu với bản **CTFL v4.0 ngày 2023-04-21**. Ở bản v3.1 cũ hơn, test level chỉ có bốn và change-related testing được xếp vào test type — đúng như mindmap AI sinh ra. Điều này cho thấy mô hình đã trộn hai phiên bản syllabus trong khi được yêu cầu mô tả ISTQB Foundation Level. Riêng lỗi 3 sai ở **mọi** phiên bản.
 
 ---
 
@@ -94,7 +94,7 @@ Branch 1 "QA vs QC vs Testing — how they differ" lists the three terms and exp
 **ISTQB v4.0, §1.3, principle 7 (p. 18):**
 > "7. **Absence-of-defects fallacy**. It is a fallacy (i.e., a misconception) to expect that software verification will ensure the success of a system."
 
-v4.0 renamed this principle from *absence-of-errors* (v3.1) to *absence-of-defects*. Same version caveat as mistakes 1 and 2: it only counts if your class uses v4.0.
+v4.0 renamed this principle from *absence-of-errors* (v3.1) to *absence-of-defects*. Khác với lỗi 1 và 2, lỗi này sai ở mọi phiên bản syllabus.
 
 **Evidence:** `evidence/mindmap_istqb_principle5.png` — the same screenshot shows principles 5, 6 and 7.
 
