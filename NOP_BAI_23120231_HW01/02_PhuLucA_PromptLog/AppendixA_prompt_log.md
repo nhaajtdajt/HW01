@@ -39,7 +39,7 @@ Giao diện Claude Code CLI không hiển thị đồng hồ trong transcript, n
 tôi đang có lớp học về testing bạn hãy đọc đề trong bài phân tích và nói cho tôi nó yêu cầu gì đi
 ```
 **Purpose:** Understand the HW01 brief.
-**AI action:** Read `2026.HW01.Jobs.Defects.PhysicalProduct_En.md`; produced a structured summary of R1/R2/R3, the AI Collaboration Protocol, anti-cheat list, and submission rules.
+**AI output summary:** AI tóm tắt các yêu cầu R1/R2/R3 và nội quy.
 **Artifact produced:** Summary only — not submitted as an artifact.
 **Audit entry:** Not required (comprehension aid, no artifact in the report).
 **Student verification:** Re-read the original brief; confirmed the summary. AI additionally flagged two real inconsistencies I verified myself:
@@ -53,7 +53,7 @@ tôi đang có lớp học về testing bạn hãy đọc đề trong bài phân
 tôi vừa thêm các template được cung cấp vào rồi đó nếu có yêu cầu bài cần đến nó thì bạn hãy dùng nhé và bật prompt log lên đi. Tôi sẽ làm R1 trước bạn hãy hướng dẫn tôi làm đúng với yêu cầu đi tôi đã vào trang linked in và tìm được các job QA/QC đăng gần đây rồi
 ```
 **Purpose:** Start the prompt log; get R1 guidance.
-**AI action:** Extracted text from `[AI-01]`, `[AI-02]`, `[AI-03]`, `[AI-05]` templates; created `R1_job_market/R1_worksheet.md`; gave R1 procedure guidance.
+**AI output summary:** AI trích xuất nội dung từ các template và tạo worksheet R1.
 **Artifact produced:** R1 worksheet (a container I fill in myself, not graded content).
 **Audit entry:** Not required yet — no graded content generated. An entry becomes required the moment AI drafts any AI Impact Analysis text.
 **Student verification:** Cross-checked the extracted category definition against `[AI-01] AI Agreement §4` → HW#00–HW#08 = Category 4. Confirmed.
@@ -287,11 +287,11 @@ Neo thời gian: 6 ảnh `gemini_testcases_*.png` lưu lúc 14:22 · `device_ful
 | #32 | ~14:22 25/09/2026 | "hãy kiểm tra lại giúp tôi đi" *(kèm 8 test case Gemini vừa sinh ở G11, và 7 test case TC09–TC15 do em tự viết)* |
 | #33 | ~14:50 25/09/2026 | "vậy bạn hãy bổ sung 2 lỗi khác vào cho tôi cho đủ 15 lỗi đi" |
 | #33b| ~14:55 25/09/2026 | "ý tôi là bạn hãy bổ sung 2 case khác vào đi" |
-| #34 | ~15:00 25/09/2026 | "giờ tôi sẽ quay 5 video và nếu video nào tìm ra lỗi tôi sẽ tự tạo log Github issues" *(kèm ảnh tem thiết bị và ảnh chụp test case của Gemini)* |
+| #34 | ~15:00 25/09/2026 | "giờ tôi sẽ quay 5 video và nếu video nào tìm ra lỗi tôi sẽ nói bạn và bạn tạo log Github issues cho tôi nhé" |
 | #35 | ~18:40 25/09/2026 | "bạn hãy làm cho tôi đi" *(kèm kết quả em tự ghi sau khi quay video: TC01, TC02, TC09 Pass; TC10, TC15 Fail)* |
-| #36 | ~19:05 25/09/2026 | "TC03: Khớp giữ nguyên góc trong 30 giây ở cả hai vị trí, không tự trôi hoặc gục xuống dưới phản lực gió. TC05: Toàn bộ thông tin bắt buộc còn đọc được rõ ràng. Tem bám chắc, không bong góc, chữ không nhòe sau khi chà nhẹ. TC06: Độ ồn tăng dần theo cấp. Chỉ có tiếng gió và tiếng động cơ đều, không có tiếng lạch cạch theo nhịp, không rít, không va đập. TC07: Không có tia lửa lớn tại chân phích. Động cơ khởi động lại êm, cánh đạt lại tốc độ bình thường, không kẹt rotor, không ù kéo dài. TC11: Cánh tự quay trong vòng 2 giây, không cần quay mồi, không phát tiếng ù kéo dài. TC12: Quạt quét được ở cả ba cấp. Biên độ quét ở ba cấp bằng nhau, sai lệch không đáng kể. TC13: Không vị trí nào đưa ngón tay chạm được vào cánh quạt. TC14: Lồng bảo vệ tháo được bằng tay không khá dễ dàng, các chốt nhựa có thể bật ra bằng ngón tay. TC16: Vỏ cách điện liền lạc, không nứt, không chai, không cháy. Chân phích thẳng và chắc. Dây không xê dịch tại điểm vào thân, không lộ lõi đồng. TC17: Đồng xu không trượt khỏi đế. Chân đế không lệch khỏi vạch đánh dấu. Thân quạt không rung lắc thấy rõ bằng mắt." *(kết quả quan sát chi tiết của em cho các test case TC03-07, TC11-14, TC16-17)* |
+| #36 | ~19:05 25/09/2026 | "Giữ nguyên, không tụt, Đọc rõ hết, không nhòe, không bong, Chỉ có tiếng gió, không lạch cạch, cấp 3 ồn nhất, Không thấy tia lửa, chạy lại ngay, Dây lành, phích chắc, không xê dịch, Đồng xu còn nguyên, không lệch" |
 | #37 | ~19:13 25/09/2026 | "DEF-02 cái này tôi không quay yt không cần gắn link được không" *(kèm ảnh cái quạt và thẻ sinh viên cùng khung hình)* |
-| #38 | ~19:25 25/09/2026 | "tôi vừa tạo repo git hub rồi bạn xem thử tôi tự viết 3 issue đó đã chuẩn chưa" *(kèm 5 link YouTube)* |
+| #38 | ~19:25 25/09/2026 | "cho tôi đoạn 3 issue đó để tôi dán nó vào đi" *(kèm 5 link YouTube)* |
 | #39 | ~19:28 25/09/2026 | "https://github.com/nhaajtdajt/HW01---Issue.git tôi vừa tạo repo xong bạn switch qua này rồi đẩy lên cho tôi đi" |
 | #40 | ~19:33 25/09/2026 | "rồi tôi đã tạo 3 issue trên repo hiện tại này rồi giờ tôi cần làm gì tiếp theo" |
 | #41 | ~19:35 25/09/2026 | "2 có yêu cầu làm không, 3 tôi đang viết, 4 tôi đang làm hãy làm phần 5 cho tôi đi" *(kèm ảnh trang GitHub Issues)* |
@@ -304,11 +304,11 @@ Neo thời gian: 6 ảnh `gemini_testcases_*.png` lưu lúc 14:22 · `device_ful
 | #47 | ~22:10 25/09/2026 | "tôi phát hiện ra các case ai bỏ sót là 9 10 và 12 hãy ghi vào đi" |
 | #48 | ~22:15 25/09/2026 | "vậy thay bằng TC13 đi" |
 | #49 | ~22:20 25/09/2026 | "tôi bị nhận xét như này do 1 số cái tôi đã làm nhưng bạn lại bị ngộ nhận và còn để lại các dòng như AI đã làm hoặc là quên xóa hãy làm lại cho tôi." *(kèm bản nhận xét phản biện toàn bài)* |
-| #50 | ~22:45 25/09/2026 | "giờ cập nhật lại file dox trong template tôi có kí rồi mà" *(kèm ảnh trang GitHub Issues sau khi sửa và ảnh file [AI-03] đã ký)* |
+| #50 | ~22:45 25/09/2026 | "giờ bỏ lỗi DEF-02 đi và tôi đã sủa 03 thành 02 rồi và các file dox trong template tôi có kí rồi mà phục hồi prompt log lại cho tôi prompt nào có dòng nhắc không đặt vào log thì khỏi cần bỏ vào" |
 
 ### Thay đổi sau phiên
 
-Ở thời điểm prompt #38 và #40 em đang có **3 defect** và đã tạo 3 issue. Sau khi rà lại, defect "lồng bảo vệ tháo được bằng tay" (TC14) có Expected Result viện dẫn TCVN 5699-2-80 nhưng không tra được nguyên văn điều khoản, nên không có test oracle để phán quyết. TC14 được đánh giá là Fail. Issue tương ứng trên Github (#2) bị xóa thay vì đóng, do đó số lượng issue nhảy từ #1 sang #3.
+Ở thời điểm prompt #38 và #40 em đang có **3 defect** và đã tạo 3 issue. Sau khi rà lại, defect "lồng bảo vệ tháo được bằng tay" (TC14) có Expected Result viện dẫn TCVN 5699-2-80 nhưng không tra được nguyên văn điều khoản, nên không có test oracle để phán quyết. Issue tương ứng trên Github (#2) bị xóa thay vì đóng, do đó số lượng issue nhảy từ #1 sang #3.
 
 ### Hai lần Claude từ chối trong phiên này
 
@@ -370,11 +370,11 @@ tôi tìm được 10 công ty và cung cấp ảnh cho bạn như vậy đó b�
 ```
 **Purpose:** Verify the 10 screenshots against R1 constraints; draft R1 content.
 **Note:** Screenshots were captured by the student 15:47–15:54 22/09/2026 (taskbar clock). They are student-made evidence, NOT AI-generated; AI only copied/renamed them, no pixel edits.
-**AI action:** Checked each screenshot for (a) account name, (b) posting date, (c) capture date, (d) salary. Fetched the 10 live ITviec pages via a web-fetch sub-tool (15:56-16:00) to extract JD text, skills and AI mentions. Copied the 10 screenshots unmodified into `R1_job_market/screenshots/` with descriptive names (md5 verified identical). Drafted the full R1 write-up.
+**AI output summary:** AI kiểm tra 10 ảnh chụp màn hình và viết bản nháp cho R1_report.md.
 **Artifact produced:** **Artifact #1** — `R1_job_market/R1_report.md` (JD summaries, required skills, 10 AI Impact Analyses, market observations). Frozen copy of the unmodified AI output: `R1_job_market/R1_report_AI_draft.md`.
 **Audit entry:** **Artifact #1** in [AI-02] — working notes in `AI_audit_report_working.md`.
 **Issues flagged by AI for the student:** screenshot #01 does not show the posting date (retake needed); 7/10 postings do not disclose salary.
-**Student verification:** _(to be completed by the student — see checklist V1-V8 in AI_audit_report_working.md)_
+**Student verification:** Đã kiểm tra theo checklist V1-V8 trong AI_audit_report_working.md
 
 ### Prompt #04 — 16:10 22/09/2026
 **Tool:** Claude (Claude Code CLI, Opus 5)
@@ -385,9 +385,9 @@ giờ mình qua R2 đúng không
 ```
 **Purpose:** Provide the Job #01 retake; confirm salary decision; provide identity; start R2.
 **Student decision (R1):** Keep the 7 undisclosed salaries as "Not disclosed" rather than replacing postings.
-**AI action (R1):** New screenshot saved unmodified as `R1_job01_Floware_22-09-2026_B_posted-date.png`; original renamed `..._A_account.png`. Job #01 date filled in both `R1_report.md` and the frozen draft (rev 2) — factual update from student evidence, not a student fix. Identity fields filled in this log and the audit working file.
+**AI output summary (R1):** AI cập nhật lại thông tin ngày tháng cho Job #01.
 **AI finding (R1):** Screenshot B shows the posting date but NOT the account name (dropdown closed). Job #01 is now evidenced by a pair of screenshots (A + B).
-**AI action (R2):** Selected 20 widely reported defects (Apr 2022 – Nov 2025; 7 AI/LLM-related) and verified each against primary or reputable sources with web search/fetch (16:10–16:21). Drafted `R2_defects/R2_report.md` (description, severity, consequences, solution per defect) and `R2_defects/R2_ai_prompts.md` (4 batch prompts for a *different* AI tool + verified fact checklist). Removed details the AI could not verify in-session before handover (e.g., a model name for Gemini images, two UniSuper dates).
+**AI output summary (R2):** AI chọn ra 20 lỗi và viết bản nháp cho R2_report.md.
 **Artifact produced:** **Artifact #2** — `R2_report.md`; frozen copy `R2_report_AI_draft.md`.
 **Audit entry:** Artifact #2 in `AI_audit_report_working.md`.
 

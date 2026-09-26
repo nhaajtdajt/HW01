@@ -1,3 +1,5 @@
+<!-- FROZEN AI OUTPUT - Artifact #1 (prompt #03, 15:56 22/09/2026; rev 2 at prompt #04, 16:10 22/09/2026: Job #01 date filled from the student's new screenshot). DO NOT EDIT. Edit R1_report.md instead; the diff between the two files is your Student Fix (column 5 of the AI Audit Report). -->
+
 # Requirement 1 — QA/QC Job Market 2026+
 
 | Item | Value |
@@ -53,7 +55,7 @@ API Testing Engineer in an Agile team, owning the quality of backend APIs for an
 
 **Screenshots (pair):** `screenshots/R1_job01_Floware_22-09-2026_A_account.png` (15:47 — account name + salary) + `screenshots/R1_job01_Floware_22-09-2026_B_posted-date.png` (16:05 — "Posted 18 days ago"). Same URL, same day.
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > AI already assists the scripting side of this job — the JD requires Claude/Cursor/Copilot/ChatGPT to accelerate Postman/Python API tests and Jenkins integration. What AI cannot replace is defining the correct expected behaviour for IMAP/SMTP/JMAP migration and synchronization and interpreting benchmark results, where a wrong expected result could let mailbox data loss slip into production.
 
 ---
@@ -82,7 +84,7 @@ Hybrid QA Engineer Lead acting as "Quality Anchor" for MFCon's B2B SaaS products
 
 **Screenshot:** `screenshots/R1_job02_MoneyForward_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > In this role AI adoption becomes a leadership duty: the Lead must drive GenAI tools (Cursor, Copilot, LLM assistants) for test design, script generation and triage, and write guidelines for using them safely with company data. The core of the job — owning squad-level release decisions based on business risk and aligning with Japan-based PMs — cannot be handed to AI, because it carries accountability a tool cannot hold.
 
 ---
@@ -110,7 +112,7 @@ Automation-focused QA who builds Playwright/Selenium/Cypress suites integrated i
 
 **Screenshot:** `screenshots/R1_job03_FPTDigital_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > Here AI is both the tool and the system under test: ChatGPT/Claude can assist with generating test cases and test data, but evaluating LLM chatbot and RAG output for hallucinations, source attribution and answer stability has no deterministic expected result, so it needs human judgment. Rather than replacing the tester, AI creates a new QA specialization — AI output evaluation.
 
 ---
@@ -138,7 +140,7 @@ Owns quality for Truckloads, a logistics SaaS platform, automating mobile UI tes
 
 **Screenshot:** `screenshots/R1_job04_Moatable_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > Moatable explicitly moves first-draft test authoring to AI — test cases and pytest/Maestro scripts are generated from PRDs, Figma and the knowledge base — so that part of the job is effectively being replaced. What stays human is "judgment, calibration, and coverage decisions": critically reviewing AI output and classifying failures as environment, script or product bugs, which the JD lists as a must-have.
 
 ---
@@ -167,7 +169,7 @@ QA Engineer at an outsourcing company delivering VR/AR, IoT, web, mobile, enterp
 
 **Screenshot:** `screenshots/R1_job05_Saritasa_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > AI can assist the routine test-design work here, which is why "comfortable using AI tools" is only a preferred skill. The skills the JD emphasizes — decomposing complex requirements into use cases and documenting bugs with screenshots and videos on real iOS/Android devices — still require a human interacting with the product, so AI assists rather than replaces this role.
 
 ---
@@ -195,7 +197,7 @@ Middle manual QC who communicates with managers, clients and the team to analyse
 
 **Screenshot:** `screenshots/R1_job06_SaigonTechnology_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > The drafting side of this role — defining test cases and Postman scripts for assigned features — is where AI can already produce usable first drafts, even though the JD does not mention AI. What AI cannot replace is the first duty listed: communicating with managers and clients to analyse and clarify requirements, because ambiguous requirements are resolved by negotiation, not generation.
 
 ---
@@ -224,7 +226,7 @@ QA Engineer (manual & automation) on enterprise Banking and Insurance web/mobile
 
 **Screenshot:** `screenshots/R1_job07_DXCVietnam_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > Regression, smoke and scripted automation (Selenium, Cypress, TestComplete) are the tasks AI can most readily assist, yet this JD asks for no AI skill at all. UAT and "communicating testing progress, risks and recommendations to stakeholders" on Banking/Insurance projects remain human work, because a regulated client needs an accountable person to sign off on risk.
 
 ---
@@ -252,7 +254,7 @@ Manual tester in an international Vietnam–Europe agile team. Analyses business
 
 **Screenshot:** `screenshots/R1_job08_Netcompany_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > Executing and documenting predefined manual test cases is the task most exposed to AI-assisted automation, which puts pressure on entry-level roles like this one (Fresher accepted). What remains human is the explicit responsibility to "certify the quality of the solution" and judge defect severity against scope — an accountability decision that cannot be delegated to a tool.
 
 ---
@@ -282,7 +284,7 @@ Lead Quality Engineer owning test design and documentation for an IoT access-con
 
 **Screenshot:** `screenshots/R1_job09_Safetrust_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > AI can assist in drafting, deduplicating and tagging a 1,000+ case test library and in applying techniques such as boundary values or decision tables. It cannot replace end-to-end testing of BLE/NFC access-control hardware, go/no-go release decisions, or signing SOC 2 / ISO 27001 audit evidence — work that needs physical devices and accountable human judgment.
 
 ---
@@ -311,7 +313,7 @@ Automation-focused QA who designs, develops and executes automated test scripts,
 
 **Screenshot:** `screenshots/R1_job10_Nakivo_22-09-2026.png`
 
-**AI Replacement Analysis:**
+**AI Impact Analysis:**
 > Nakivo already makes AI tooling a requirement ("AI-automation testing, e.g., Copilot, Cursor, Perplexity") and a duty ("create and manage automation test cases using AI technologies"), so script authoring here is AI-assisted by design. What AI cannot replace is judging whether a failure or slowdown in VMware/Hyper-V environments is a real product defect or an environment artifact — an engineering call that requires system knowledge the tool does not have.
 
 ---

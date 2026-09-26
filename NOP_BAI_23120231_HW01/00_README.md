@@ -31,6 +31,9 @@ Các đường dẫn trong báo cáo và trong `[AI-02]` viết theo cây thư m
 | `prompt_log.md` | `02_PhuLucA_PromptLog/AppendixA_prompt_log.md` |
 | `R3_TestCases_Checklist_Summary.xlsx` | `03_Excel/` |
 | `R1_report_AI_draft.md`, `R2_report_AI_draft.md`, `mindmap_ai_original.md` | `10_Ban_goc_do_AI_sinh/` |
+| `R2_ai_prompts.md` | `10_Ban_goc_do_AI_sinh/R2_cac_prompt_gui_Gemini.md` |
+| `R1_job_market/R1_report.md`, `R2_defects/R2_report.md` | Báo cáo chính, mục Requirement 1 và Requirement 2 |
+| `R3_device/R3_edge_cases_explanation.md` | Bản cuối nằm trong báo cáo chính, mục "R3 — Ba edge case AI không tìm ra" |
 
 ## Tóm tắt bài làm
 
